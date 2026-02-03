@@ -1,6 +1,7 @@
 import React, { lazy } from "react";
 import { Link } from "react-router";
 import blogPosts from "../data/blogposts";
+import Heading from "./heading";
 
 const HomePage = lazy(
   () =>
@@ -11,6 +12,7 @@ const HomePage = lazy(
 
             return (
               <div className="min-h-screen min-w-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+                <Heading />
                 <div className="container mx-auto px-4 py-8">
                   <header className="mb-12 text-center">
                     <h1 className="text-5xl font-bold text-gray-800 mb-4">
