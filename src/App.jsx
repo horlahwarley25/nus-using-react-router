@@ -3,8 +3,8 @@ import { Routes, Route } from "react-router";
 import HomePage from "./components/homepage";
 import DetailPage from "./components/detailspage";
 import LoadingSpinner from "./components/loadingspinner";
-import "./styles.css";
 import Heading from "./components/heading";
+import "./styles.css";
 import Footer from "./components/footer";
 
 let ErrorBoundary = lazy(() => import("./components/errorboundary"));
@@ -22,14 +22,12 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route
             path="/post/:id"
-            element={
-              <DetailPage />
-            }
+            element={<DetailPage />}
           />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Suspense>
-        <Footer />
+      <Footer />
     </ErrorBoundary>
   );
 }
